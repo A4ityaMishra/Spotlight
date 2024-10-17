@@ -53,7 +53,7 @@ mood_to_genre = {
 ## The functions were defined by Adi
 
 def detect_mood(user_input):
-    blob = TextBlob(text)
+    blob = TextBlob(user_input)
     polarity = blob.sentiment.polarity
 
     if polarity > 0.6:
