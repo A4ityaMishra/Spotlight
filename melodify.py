@@ -14,6 +14,8 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
     scope=scope
 ))
 
+## The above code was written by Adi
+
 mood_to_features = {
     "very happy": {"energy": 0.9, "valence": 0.9},
     "happy": {"energy": 0.8, "valence": 0.8},
@@ -46,6 +48,9 @@ mood_to_genre = {
     "romantic": "R&B",
 }
 
+## Mapping mood to features and genre was done by Rohan
+
+## The functions were defined by Adi
 
 def detect_mood(user_input):
     blob = TextBlob(text)
