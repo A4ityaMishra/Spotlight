@@ -55,8 +55,16 @@ mood_to_genre = {
 def detect_mood(user_input):
     blob = TextBlob(user_input)
     polarity = blob.sentiment.polarity
+    
+    if "romantic" in user_input.lower() or "love" in user_input.lower():
+        return "romantic"
+    elif "nostalgic" in user_input.lower() or "memories" in user_input.lower():
+        return "nostalgic"
+    elif "anxious" in user_input.lower() or "nervous" in user_input.lower():
+        return "anxious"
 
-    if polarity > 0.6:
+# Generalizing the rest of the moods, (yeah I couldn't really think of a better way, maybe I'll switch to another model for sentiment analysis going forward)
+    elif polarity > 0.6:
         return "very happy"
     elif polarity > 0.2:
         return "happy"
@@ -68,6 +76,7 @@ def detect_mood(user_input):
         return "sad"
     else:
         return "very sad"
+
 
 def recommended_songs(mood, energy, valence, sp):
     genre = mood_to_genre.get(mood, "pop")
