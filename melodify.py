@@ -89,4 +89,8 @@ def recommended_songs(mood, energy, valence, sp):
     recommendations = sp.recommendations(**query_params)
     recommended_songs = []
 
+
+
+user_input = input('How\'re you feeling today?\n')
+
 # We got kinda lazy we'll complete this eventually :)
