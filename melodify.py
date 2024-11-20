@@ -2,8 +2,8 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from textblob import TextBlob
 
-CLIENT_ID = 'b738762f62eb432cb9e9b781d884384b'
-CLIENT_SECRET = '5007b396aaa345d5be1bd211479cbd66'
+CLIENT_ID = ID
+CLIENT_SECRET = SECRET
 REDIRECT_URI = "http://localhost:8888/callback"
 
 scope = 'user-library-read playlist-read-private user-modify-playback-state'
